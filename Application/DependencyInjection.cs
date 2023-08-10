@@ -8,8 +8,9 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
+        services.AddHttpContextAccessor();
         services.AddMediatR(Assembly.GetExecutingAssembly());
-
+        
         return services;
     }
 }

@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using FluentResults;
+using Core.Entities;
 using Application.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,23 +15,38 @@ public class UserController : ControllerBase
     public UserController(IMediator mediator) => _mediator = mediator;
     // --------------------------------------------------------------------------------------------
     [HttpPost("Login")]
-    public async Task<IActionResult> Login(LoginUserCommand command)
+    [ProducesResponseType(type: typeof(Result<string>), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Result>> Login(LoginUserCommand command)
     {
         var result = await _mediator.Send(command);
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpPost("Signup")]
-    public async Task<IActionResult> Signup(SignupUserCommand command)
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Result>> Signup(SignupUserCommand command)
     {
         var result = await _mediator.Send(command);
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpGet("Get")]
-    public async Task<IActionResult> Get()
+    [ProducesResponseType(type: typeof(Result<User>), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Result>> Get()
     {
         var result = await _mediator.Send(new GetUsersRequest());
+
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
 }

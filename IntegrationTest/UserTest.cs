@@ -1,6 +1,6 @@
+using Core.Entities;
 using Newtonsoft.Json;
 using Xunit.Abstractions;
-using Infrastructure.Models;
 using System.Net.Http.Headers;
 
 namespace IntegrationTest;
@@ -17,7 +17,7 @@ public class UserTest
     {
         _httpClient = new HttpClient();
 
-        var user = new Users
+        var user = new User
         {
             UserName = "matin",
             Password = "12345"
@@ -38,7 +38,7 @@ public class UserTest
     {
         _httpClient = new HttpClient();
 
-        var user = new Users
+        var user = new User
         {
             UserName = "matin",
             Password = "12345"
@@ -59,7 +59,7 @@ public class UserTest
     {
         _httpClient = new HttpClient();
 
-        var user = new Users
+        var user = new User
         {
             UserName = "matin",
             Password = "123"

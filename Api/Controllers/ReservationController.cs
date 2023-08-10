@@ -1,4 +1,6 @@
 ﻿using MediatR;
+using FluentResults;
+using Core.Entities;
 using Application.Reservation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
@@ -15,16 +17,27 @@ public class ReservationController : ControllerBase
     public ReservationController(IMediator mediator) => _mediator = mediator;
     // --------------------------------------------------------------------------------------------
     [HttpPost("Register")]
-    public async Task<IActionResult> Reservation(RegisterReservationCommand command)
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult<Result>> Reservation(RegisterReservationCommand command)
     {
         var result = await _mediator.Send(command);
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpGet("Get")]
-    public async Task<IActionResult> Get()
+    [ProducesResponseType(type: typeof(Result<Reservation>), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<Result>> Get()
     {
         var result = await _mediator.Send(new GetReservationsRequest());
+
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
 }

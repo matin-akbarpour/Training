@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Core.Entities;
+using Newtonsoft.Json;
 using Xunit.Abstractions;
-using Infrastructure.Models;
+using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 
 namespace IntegrationTest;
@@ -16,7 +17,7 @@ public class ReservationTest
     {
         _httpClient = new HttpClient();
 
-        var user = new Users
+        var user = new User
         {
             UserName = "matin",
             Password = "123"
@@ -26,7 +27,8 @@ public class ReservationTest
         byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
         var response = await _httpClient.PostAsync("https://localhost:44300/api/User/Login", byteContent);
         var result = await response.Content.ReadAsStringAsync();
-        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result);
+        var resultJson = JObject.Parse(result);
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", resultJson["value"]!.ToString());
     }
     // --------------------------------------------------------------------------------------------
     [Fact]
@@ -48,10 +50,10 @@ public class ReservationTest
 
         await Login();
         
-        var reservation = new Reservations
+        var reservation = new Reservation
         {
-            LocationID = 1,
-            ReservationDate = Convert.ToDateTime("2023-07-03")
+            LocationId = 1,
+            ReservationDate = Convert.ToDateTime("2001-01-01")
         };
 
         var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(reservation)));

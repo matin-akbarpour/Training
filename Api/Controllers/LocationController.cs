@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using FluentResults;
+using Core.Entities;
 using Application.Location;
-using Infrastructure.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Authorization;
@@ -16,32 +17,52 @@ public class LocationController : ControllerBase
     private readonly IMediator _mediator;
     public LocationController(IMediator mediator) => _mediator = mediator;
     // --------------------------------------------------------------------------------------------
-    [HttpGet("Get/{pageNumber:int}/{pageLimit:int}")]
-    public async Task<IActionResult> Get(int pageNumber, int pageLimit, string? title, string? locationType)
+    [HttpGet("Get")]
+    [ProducesResponseType(type: typeof(Result<Location>), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Get([FromQuery] GetLocationsRequest request)
     {
-        var result = await _mediator.Send(new GetLocationsRequest
-            {pageNumber = pageNumber, pageLimit = pageLimit, title = title, locationType = locationType});
+        var result = await _mediator.Send(request);
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpPost("Register")]
-    public async Task<IActionResult> Register(RegisterLocationCommand command)
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Register(RegisterLocationCommand command)
     {
         var result = await _mediator.Send(command);
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpPatch("Update/{id:int}")]
-    public async Task<IActionResult> Update(int id, [FromBody] JsonPatchDocument<Locations>? patchDocument)
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
+    public async Task<ActionResult> Update(int id, [FromBody] JsonPatchDocument<Location> patchDocument)
     {
-        var result = await _mediator.Send(new UpdateLocationCommand {Id = id, PatchDocument = patchDocument});
+        var result = await _mediator.Send(new UpdateLocationCommand {Id=id, PatchDocument=patchDocument});
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
     // --------------------------------------------------------------------------------------------
     [HttpDelete("Delete/{id:int}")]
-    public async Task<IActionResult> Delete(int id)
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> Delete(int id)
     {
-        var result = await _mediator.Send(new DeleteLocationCommand {Id = id});
+        var result = await _mediator.Send(new DeleteLocationCommand {Id=id});
+        
+        if (result.IsFailed)
+            return BadRequest(result);
         return Ok(result);
     }
 }

@@ -1,49 +1,15 @@
-﻿using Dapper;
-using System.Data;
-using Dapper.FastCrud;
-using Infrastructure.Models;
+﻿using Dapper.FastCrud;
+using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.Location;
 
-public class LocationRepo : ILocationRepo
+public class LocationRepo : DapperRepository<Core.Entities.Location, int>, ILocationRepo
 {
-    private readonly IDbConnection _dbConnection;
-    public LocationRepo(IDbConnection dbConnection) => _dbConnection = dbConnection;
+    public LocationRepo(DbSession session) : base(session) { }
     // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Core.Entities.Location>> GetLocations(DynamicParameters parameters)
+    public async Task<Core.Entities.Location?> LocationById(int id)
     {
-        var location = await _dbConnection.QueryAsync<Core.Entities.Location>("PagingFilteringLocations", parameters, commandType: CommandType.StoredProcedure);
-        return location.ToList();
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task RegisterLocation(Locations location)
-    {
-        await _dbConnection.QueryFirstOrDefaultAsync("ResetLocationID", commandType: CommandType.StoredProcedure);
-        await _dbConnection.InsertAsync(location);
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task UpdateLocation(int id, Locations location)
-    {
-        var parameters = new UpdateDeleteLocations()
-        {
-            LocationID = id,
-            Title = location.Title,
-            Address = location.Address,
-            LocationType = location.LocationType,
-            Geolocation = location.Geolocation
-        };
-        await _dbConnection.UpdateAsync(parameters);
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task DeleteLocation(int id)
-    {
-        await _dbConnection.DeleteAsync(new UpdateDeleteLocations { LocationID = id });
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Locations>> LocationById(int id)
-    {
-        const string query = "SELECT * FROM Locations WHERE LocationID=@LocationID";
-        var location = await _dbConnection.QueryAsync<Locations>(query, new {LocationID=id});
-        return location.ToList();
+        var locationData = await Session.Connection.GetAsync(new Core.Entities.Location {LocationId=id});
+        return locationData;
     }
 }

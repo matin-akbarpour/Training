@@ -1,11 +1,9 @@
-using Infrastructure.Models;
+using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.User;
 
-public interface IUserRepo
+public interface IUserRepo : IRepository<Core.Entities.User, string>
 {
-    public Task<IEnumerable<Users>> LoginUser(Users user);
-    public Task SignupUser(Users user);
-    public Task<IEnumerable<Core.Entities.User>> GetUsers();
-    public Task<IEnumerable<Users>> CheckUser(Users user);
+    public Task<IEnumerable<Core.Entities.User>> LoginUser(Core.Entities.User user);
+    public Task<Core.Entities.User?> UserById(string? userName);
 }

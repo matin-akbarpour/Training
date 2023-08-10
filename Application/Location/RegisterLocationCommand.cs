@@ -1,13 +1,12 @@
 ﻿using MediatR;
+using FluentResults;
 using Infrastructure;
-using Application.User;
-using Infrastructure.Models;
-using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace Application.Location;
 
-public class RegisterLocationCommand : IRequest<string>
+public class RegisterLocationCommand : IRequest<Result>
 {
     [Required]
     public string? Title { get; set; }
@@ -18,27 +17,34 @@ public class RegisterLocationCommand : IRequest<string>
     [Required]
     public string? Geolocation { get; set; }
    
-    public class RegisterLocationHandler : IRequestHandler<RegisterLocationCommand, string>
+    public class RegisterLocationHandler : IRequestHandler<RegisterLocationCommand, Result>
     {
         private readonly IUnitOfWork _unitOfWork;
-        public RegisterLocationHandler(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
-
-        public async Task<string> Handle(RegisterLocationCommand command, CancellationToken cancellationToken)
+        private readonly IHttpContextAccessor _accessor;
+        
+        public RegisterLocationHandler(IHttpContextAccessor accessor, IUnitOfWork unitOfWork)
         {
-            var location = new Locations
+            _accessor = accessor;
+            _unitOfWork = unitOfWork;
+        }
+
+        public async Task<Result> Handle(RegisterLocationCommand command, CancellationToken cancellationToken)
+        {
+            var result = new Result();
+            
+            var location = new Core.Entities.Location
             {
                 Title = command.Title,
                 Address = command.Address,
                 LocationType = command.LocationType,
                 Geolocation = command.Geolocation,
-                RegistrarUserName = LoginUserCommand.LoginUserHandler._userName
+                RegistrationDate = DateTime.Now,
+                RegistrarUserName = _accessor.HttpContext!.User.Claims.First(c => c.Type == "UserName").Value
             };
 
-            if (location.RegistrarUserName.IsNullOrEmpty())
-                return "You should login first";
-
-            await _unitOfWork.Location.RegisterLocation(location);
-            return "Location registered";
+            await _unitOfWork.Location.ExecuteQueryAsync("EXECUTE ResetLocationID");
+            await _unitOfWork.Location.InsertAsync(location);
+            return result.WithSuccess("Location registered");
         }
     }
 }

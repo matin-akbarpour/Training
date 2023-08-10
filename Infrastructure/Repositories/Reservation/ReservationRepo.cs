@@ -1,32 +1,19 @@
 ﻿using Dapper;
-using System.Data;
-using Dapper.FastCrud;
-using Infrastructure.Models;
+using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.Reservation;
 
-public class ReservationRepo : IReservationRepo
+public class ReservationRepo : DapperRepository<Core.Entities.Reservation, int>, IReservationRepo
 {
-    private readonly IDbConnection _dbConnection;
-    public ReservationRepo(IDbConnection dbConnection) => _dbConnection = dbConnection;
+    public ReservationRepo(DbSession session) : base(session) { }
     // --------------------------------------------------------------------------------------------
-    public async Task RegisterReservation(Reservations reservation)
+    public async Task<IEnumerable<Core.Entities.Reservation>> CheckReservation(Core.Entities.Reservation reservation)
     {
-        await _dbConnection.QueryFirstOrDefaultAsync("ResetReservationID", commandType: CommandType.StoredProcedure);
-        await _dbConnection.InsertAsync(reservation);
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Core.Entities.Reservation>> GetReservations()
-    {
-        const string query = "SELECT * FROM Reservations";
-        var reservation = await _dbConnection.QueryAsync<Core.Entities.Reservation>(query);
-        return reservation.ToList();
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Reservations>> CheckReservation(Reservations reservation)
-    {
-        const string query = "SELECT * FROM Reservations WHERE LocationID=@LocationID AND ReservationDate=@ReservationDate";
-        var reservationData = await _dbConnection.QueryAsync<Reservations>(query, reservation);
+        var parameters = new DynamicParameters();
+        parameters.Add("LocationId", reservation.LocationId);
+        parameters.Add("ReservationDate", reservation.ReservationDate);
+
+        var reservationData = await QueryAsync("WHERE LocationId=@LocationId AND ReservationDate=@ReservationDate", parameters);
         return reservationData.ToList();
     }
 }

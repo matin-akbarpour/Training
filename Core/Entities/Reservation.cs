@@ -1,8 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Core.Entities;
 
+[Table("Reservations")]
 public class Reservation
 {
-    public int ReservationID { get; set; }
+    [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public int ReservationId { get; set; }
 
     public DateTime RegistrationDate { get; set; }
     
@@ -12,5 +17,5 @@ public class Reservation
     
     public string? RegistrarUserName { get; set; }
     
-    public int LocationID { get; set; }
+    public int LocationId { get; set; }
 }

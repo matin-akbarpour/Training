@@ -1,10 +1,8 @@
-﻿using Infrastructure.Models;
+﻿using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.Reservation;
 
-public interface IReservationRepo
+public interface IReservationRepo : IRepository<Core.Entities.Reservation, int>
 {
-    public Task RegisterReservation(Reservations location);
-    public Task<IEnumerable<Core.Entities.Reservation>> GetReservations();
-    public Task<IEnumerable<Reservations>> CheckReservation(Reservations reservation);
+    public Task<IEnumerable<Core.Entities.Reservation>> CheckReservation(Core.Entities.Reservation reservation);
 }

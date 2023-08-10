@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using Core.Entities;
+using Newtonsoft.Json;
 using Xunit.Abstractions;
-using Infrastructure.Models;
+using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 
 namespace IntegrationTest;
@@ -14,8 +15,8 @@ public class LocationTest
     // ------------------------------------------
     private class PatchDoc
     {
-        public string? path { get; set; }
         public string? op { get; set; }
+        public string? path { get; set; }
         public string? value { get; set; }
     }
     // ------------------------------------------
@@ -23,7 +24,7 @@ public class LocationTest
     {
         _httpClient = new HttpClient();
 
-        var user = new Users
+        var user = new User
         {
             UserName = "matin",
             Password = "123"
@@ -33,7 +34,8 @@ public class LocationTest
         byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
         var response = await _httpClient.PostAsync("https://localhost:44300/api/User/Login", byteContent);
         var result = await response.Content.ReadAsStringAsync();
-        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result);
+        var resultJson = JObject.Parse(result);
+        _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", resultJson["value"]!.ToString());
     }
     // --------------------------------------------------------------------------------------------
     [Fact]
@@ -43,7 +45,7 @@ public class LocationTest
 
         await Login();
         
-        var response = await _httpClient.GetAsync($"https://localhost:44300/api/Location/Get/{1}/{3}");
+        var response = await _httpClient.GetAsync($"https://localhost:44300/api/Location/Get?pageNumber=1&pageLimit=10");
         var result = await response.Content.ReadAsStringAsync();
         _testOutputHelper.WriteLine(result);
     }
@@ -55,7 +57,7 @@ public class LocationTest
 
         await Login();
         
-        var location = new Locations
+        var location = new Location
         {
             Title = "abc",
             Address = "abc",
@@ -82,16 +84,16 @@ public class LocationTest
         {
             new()
             {
-                path = "/Title",
                 op = "replace",
-                value = "bbb"
+                path = "Title",
+                value = "title2"
             }
         };
 
         var byteContent = new ByteArrayContent(System.Text.Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(update)));
         byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
         
-        var response = await _httpClient.PatchAsync($"https://localhost:44300/api/Location/Update/{5}", byteContent);
+        var response = await _httpClient.PatchAsync($"https://localhost:44300/api/Location/Update/{4}", byteContent);
         var result = await response.Content.ReadAsStringAsync();
         _testOutputHelper.WriteLine(result);
     }
@@ -103,7 +105,7 @@ public class LocationTest
 
         await Login();
 
-        var response = await _httpClient.DeleteAsync($"https://localhost:44300/api/Location/Delete/{5}");
+        var response = await _httpClient.DeleteAsync($"https://localhost:44300/api/Location/Delete/{4}");
         var result = await response.Content.ReadAsStringAsync();
         _testOutputHelper.WriteLine(result);
     }

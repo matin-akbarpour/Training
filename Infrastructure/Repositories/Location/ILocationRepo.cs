@@ -1,13 +1,8 @@
-﻿using Dapper;
-using Infrastructure.Models;
+﻿using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.Location;
 
-public interface ILocationRepo
+public interface ILocationRepo : IRepository<Core.Entities.Location, int>
 {
-    public Task<IEnumerable<Core.Entities.Location>> GetLocations(DynamicParameters parameters);
-    public Task RegisterLocation(Locations location);
-    public Task UpdateLocation(int id, Locations location);
-    public Task DeleteLocation(int id);
-    public Task<IEnumerable<Locations>> LocationById(int id);
+    public Task<Core.Entities.Location?> LocationById(int id);
 }

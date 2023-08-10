@@ -1,38 +1,26 @@
 using Dapper;
-using System.Data;
 using Dapper.FastCrud;
-using Infrastructure.Models;
+using wallet.lib.dapper;
 
 namespace Infrastructure.Repositories.User;
 
-public class UserRepo : IUserRepo
+public class UserRepo : DapperRepository<Core.Entities.User, string>, IUserRepo
 {
-    private readonly IDbConnection _dbConnection;
-    public UserRepo(IDbConnection dbConnection) => _dbConnection = dbConnection;
+    public UserRepo(DbSession session) : base(session) { }
     // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Users>> LoginUser(Users user)
+    public async Task<IEnumerable<Core.Entities.User>> LoginUser(Core.Entities.User user)
     {
-        const string query = "SELECT * FROM Users WHERE UserName=@UserName AND Password=@Password";
-        var userData = await _dbConnection.QueryAsync<Users>(query, user);
+        var parameters = new DynamicParameters();
+        parameters.Add("UserName", user.UserName);
+        parameters.Add("Password", user.Password);
+        
+        var userData = await QueryAsync("WHERE UserName=@UserName AND Password=@Password", parameters);
         return userData.ToList();
     }
     // --------------------------------------------------------------------------------------------
-    public async Task SignupUser(Users user)
+    public async Task<Core.Entities.User?> UserById(string? userName)
     {
-        await _dbConnection.InsertAsync(user);
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Core.Entities.User>> GetUsers()
-    {
-        const string query = "SELECT * FROM Users";
-        var user = await _dbConnection.QueryAsync<Core.Entities.User>(query);
-        return user.ToList();
-    }
-    // --------------------------------------------------------------------------------------------
-    public async Task<IEnumerable<Users>> CheckUser(Users user)
-    {
-        const string query = "SELECT * FROM Users WHERE UserName=@UserName";
-        var userData = await _dbConnection.QueryAsync<Users>(query, new {user.UserName});
-        return userData.ToList();
+        var userData = await Session.Connection.GetAsync(new Core.Entities.User {UserName=userName});
+        return userData;
     }
 }

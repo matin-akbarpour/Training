@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System.Text;
+using FluentResults;
 using Infrastructure;
-using Infrastructure.Models;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -10,16 +10,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Application.User;
 
-public class LoginUserCommand : IRequest<string>
+public class LoginUserCommand : IRequest<Result<string>>
 {
     [Required]
     public string? UserName { get; set; }
     [Required]
     public string? Password { get; set; }
     
-    public class LoginUserHandler : IRequestHandler<LoginUserCommand, string>
+    public class LoginUserHandler : IRequestHandler<LoginUserCommand, Result<string>>
     {
-        public static string? _userName;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IConfiguration _configuration;
 
@@ -29,17 +28,20 @@ public class LoginUserCommand : IRequest<string>
             _unitOfWork = unitOfWork;
         }
         
-        public async Task<string> Handle(LoginUserCommand command, CancellationToken cancellationToken)
+        public async Task<Result<string>> Handle(LoginUserCommand command, CancellationToken cancellationToken)
         {
-            var user = new Users
+            var result = new Result<string>();
+            
+            var user = new Core.Entities.User
             {
                 UserName = command.UserName,
-                Password = command.Password,
+                Password = command.Password
             };
-            
+                
             var userData = await _unitOfWork.User.LoginUser(user);
-            if (userData.IsNullOrEmpty()) return "Invalid username or password";
-
+            if (userData.IsNullOrEmpty())
+                return result.WithSuccess("Invalid username or password");
+                
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
@@ -55,9 +57,8 @@ public class LoginUserCommand : IRequest<string>
                 expires: DateTime.UtcNow.AddMinutes(10),
                 signingCredentials: login);
 
-            _userName = user.UserName;
-            
-            return new JwtSecurityTokenHandler().WriteToken(token);
+            result.WithSuccess("User Logged in");
+            return result.WithValue(new JwtSecurityTokenHandler().WriteToken(token));
         }
     }
 }

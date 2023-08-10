@@ -128,6 +128,17 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "4.7.2"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "7.0.0"
+        }
+      },
       "Microsoft.AspNetCore.JsonPatch/7.0.9": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0",
@@ -802,6 +813,60 @@
           }
         }
       },
+      "NLog/5.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.3.1999"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.3.3": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "NLog": "5.2.3"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.3.381"
+          }
+        }
+      },
+      "NLog.Slack/2.0.0": {
+        "dependencies": {
+          "NLog": "5.2.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Slack.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "NLog.Targets.Seq/2.0.0": {
+        "dependencies": {
+          "NLog": "5.2.3"
+        },
+        "runtime": {
+          "lib/net5.0/NLog.Targets.Seq.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "NLog.Web.AspNetCore/5.3.3": {
+        "dependencies": {
+          "NLog.Extensions.Logging": "5.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Web.AspNetCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.3.940"
+          }
+        }
+      },
       "NuGet.Frameworks/5.11.0": {
         "runtime": {
           "lib/netstandard2.0/NuGet.Frameworks.dll": {
@@ -817,6 +882,13 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
           "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "runtime.native.System.Data.SqlClient.sni/4.7.0": {
+        "dependencies": {
+          "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
+          "runtime.win-x86.runtime.native.System.Data.SqlClient.sni": "4.4.0"
         }
       },
       "runtime.native.System.IO.Compression/4.3.0": {
@@ -858,6 +930,33 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/sni.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/sni.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
+      "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+        "runtimeTargets": {
+          "runtimes/win-x86/native/sni.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "4.6.25512.1"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.5.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -943,6 +1042,33 @@
           "System.IO": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0"
+        }
+      },
+      "System.Data.SqlClient/4.8.2": {
+        "dependencies": {
+          "Microsoft.Win32.Registry": "5.0.0",
+          "System.Security.Principal.Windows": "5.0.0",
+          "runtime.native.System.Data.SqlClient.sni": "4.7.0"
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "assemblyVersion": "4.6.1.2",
+            "fileVersion": "4.700.20.37001"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.6.1.2",
+            "fileVersion": "4.700.20.37001"
+          },
+          "runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.6.1.2",
+            "fileVersion": "4.700.20.37001"
+          }
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -1571,6 +1697,48 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "wallet.lib.Base/1.0.7": {
+        "dependencies": {
+          "FluentResults": "3.15.2",
+          "MediatR": "11.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/wallet.lib.Base.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
+          }
+        }
+      },
+      "wallet.lib.dapper/6.4.2": {
+        "dependencies": {
+          "Dapper": "2.0.143",
+          "Dapper.FastCrud": "3.1.46",
+          "System.Data.SqlClient": "4.8.2",
+          "wallet.lib.Base": "1.0.7"
+        },
+        "runtime": {
+          "lib/net5.0/wallet.lib.dapper.dll": {
+            "assemblyVersion": "6.4.1.0",
+            "fileVersion": "6.4.1.0"
+          }
+        }
+      },
+      "wallet.lib.logger/2.2.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "NLog": "5.2.3",
+          "NLog.Slack": "2.0.0",
+          "NLog.Targets.Seq": "2.0.0",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/wallet.lib.logger.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
       "xunit/2.4.2": {
         "dependencies": {
           "xunit.analyzers": "1.0.0",
@@ -1633,12 +1801,10 @@
         "dependencies": {
           "Application": "1.0.0",
           "Core": "1.0.0",
-          "FluentResults": "3.15.2",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "7.0.9",
-          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "7.0.9",
           "Microsoft.AspNetCore.OpenApi": "7.0.9",
-          "Swashbuckle.AspNetCore": "6.5.0"
+          "NLog.Web.AspNetCore": "5.3.3",
+          "Swashbuckle.AspNetCore": "6.5.0",
+          "wallet.lib.logger": "2.2.1"
         },
         "runtime": {
           "Api.dll": {}
@@ -1669,7 +1835,8 @@
           "Dapper.FastCrud": "3.1.46",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.9",
           "Microsoft.Extensions.Configuration": "7.0.0",
-          "Microsoft.Extensions.DependencyInjection": "7.0.0"
+          "Microsoft.Extensions.DependencyInjection": "7.0.0",
+          "wallet.lib.dapper": "6.4.2"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -1752,6 +1919,20 @@
       "sha512": "sha512-sqrvj8x9e7i7QD+q4SJ0iR0rlA6az8WJl7oO5mS9lmgOaIwKKf8MEzcF5XWf/Yk6CA4akH3SnH0JB4+huKUPNg==",
       "path": "microsoft.aspnetcore.authentication.jwtbearer/7.0.9",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.7.0.9.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/7.0.9": {
       "type": "package",
@@ -2068,6 +2249,41 @@
       "path": "newtonsoft.json.bson/1.0.2",
       "hashPath": "newtonsoft.json.bson.1.0.2.nupkg.sha512"
     },
+    "NLog/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rHTNRtQF5qYqLutSR9ldUWXglKym/KA1R6GKw4JtDvza8i5+kgfmeKH75Ccn1noeJIOjHLXorphMxKk3EiN2tg==",
+      "path": "nlog/5.2.3",
+      "hashPath": "nlog.5.2.3.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/5.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o3V1oUr0izjhU1djuVqN5JdmNUGmunTs3Amjhumt/nxva8kG9QWjOdba+ciwkP//QOjv+KkGklZtI9o4qz50hQ==",
+      "path": "nlog.extensions.logging/5.3.3",
+      "hashPath": "nlog.extensions.logging.5.3.3.nupkg.sha512"
+    },
+    "NLog.Slack/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oPsWMExry9NtFWYLrQCU4srkit5355hHLYxJQupYOPFsRooU8NX4AolSgs5DoulbKqb72NS6micGoA51UmrPgg==",
+      "path": "nlog.slack/2.0.0",
+      "hashPath": "nlog.slack.2.0.0.nupkg.sha512"
+    },
+    "NLog.Targets.Seq/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zgu34VDkcA4471BKjNk5tHWUlg0SJGWZoJXSaQrOlA2MGE4ZbBc/qSBDzEF74mm9xENDg8tftMyIUDhIzT2vJQ==",
+      "path": "nlog.targets.seq/2.0.0",
+      "hashPath": "nlog.targets.seq.2.0.0.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/5.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ub8LOAbIGIPtv9nMAdZXlxUvszau6p2Svmeo8mhJFD+PQDMnI6PFc5IID1Jj3c1Lv8sxKVL7vRCsaWdTrmnrFw==",
+      "path": "nlog.web.aspnetcore/5.3.3",
+      "hashPath": "nlog.web.aspnetcore.5.3.3.nupkg.sha512"
+    },
     "NuGet.Frameworks/5.11.0": {
       "type": "package",
       "serviceable": true,
@@ -2102,6 +2318,13 @@
       "sha512": "sha512-c/qWt2LieNZIj1jGnVNsE2Kl23Ya2aSTBuXMD6V7k9KWr6l16Tqdwq+hJScEpWER9753NWC8h96PaVNY5Ld7Jw==",
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
+    },
+    "runtime.native.System.Data.SqlClient.sni/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9kyFSIdN3T0qjDQ2R0HRXYIhS3l5psBzQi6qqhdLz+SzFyEy4sVxNOke+yyYv8Cu8rPER12c3RDjLT8wF3WBYQ==",
+      "path": "runtime.native.system.data.sqlclient.sni/4.7.0",
+      "hashPath": "runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512"
     },
     "runtime.native.System.IO.Compression/4.3.0": {
       "type": "package",
@@ -2187,6 +2410,27 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
+    "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==",
+      "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "runtime.win-x64.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==",
+      "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "runtime.win-x86.runtime.native.System.Data.SqlClient.sni/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
+      "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
+      "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
     "Swashbuckle.AspNetCore/6.5.0": {
       "type": "package",
       "serviceable": true,
@@ -2263,6 +2507,13 @@
       "sha512": "sha512-DHDrIxiqk1h03m6khKWV2X8p/uvN79rgSqpilL6uzpmSfxfU5ng8VcPtW4qsDsQDHiTv6IPV9TmD5M/vElPNLg==",
       "path": "system.console/4.3.0",
       "hashPath": "system.console.4.3.0.nupkg.sha512"
+    },
+    "System.Data.SqlClient/4.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-80vGtW6uLB4AkyrdVuKTXYUyuXDPAsSKbTVfvjndZaRAYxzFzWhJbvUfeAKrN+128ycWZjLIAl61dFUwWHOOTw==",
+      "path": "system.data.sqlclient/4.8.2",
+      "hashPath": "system.data.sqlclient.4.8.2.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -2711,6 +2962,27 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "wallet.lib.Base/1.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NV+fCn2ArS0mAVBdwoJ8HfXXfEk7/wKbMfxN8GBpQDVd0bFLTz0cgvWOHc/7AzjJ4XJ11QHrAmuW17Ofgo2O0Q==",
+      "path": "wallet.lib.base/1.0.7",
+      "hashPath": "wallet.lib.base.1.0.7.nupkg.sha512"
+    },
+    "wallet.lib.dapper/6.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F6f9ZDv60CEjLJI0gLNUci5UZQGWdC8nTRiQ44gKmyZcygnHjGQhk9I92HqxGXWoXPGlZIylJ+2PVfPJq51wrQ==",
+      "path": "wallet.lib.dapper/6.4.2",
+      "hashPath": "wallet.lib.dapper.6.4.2.nupkg.sha512"
+    },
+    "wallet.lib.logger/2.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qykivIH+Gf9ZJfS2010E2HiLVWWFwTRMosLhnjuqicDT/GsH2xINeeH83AGxcpzo0tzkZwHwv2sj22GgED3uEw==",
+      "path": "wallet.lib.logger/2.2.1",
+      "hashPath": "wallet.lib.logger.2.2.1.nupkg.sha512"
     },
     "xunit/2.4.2": {
       "type": "package",

@@ -1,33 +1,47 @@
 ﻿using MediatR;
+using FluentResults;
 using Infrastructure;
-using Infrastructure.Models;
 using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Application.Location;
 
-public class UpdateLocationCommand : IRequest<string>
+public class UpdateLocationCommand : IRequest<Result>
 {
     public int Id { get; set; }
-    public JsonPatchDocument<Locations>? PatchDocument { get; set; }
+    public JsonPatchDocument<Core.Entities.Location>? PatchDocument { get; set; }
 
-    public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, string>
+    public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Result>
     {
         private readonly IUnitOfWork _unitOfWork;
         public UpdateLocationHandler(IUnitOfWork unitOfWork) => _unitOfWork = unitOfWork;
 
-        public async Task<string> Handle(UpdateLocationCommand command, CancellationToken cancellationToken)
+        public async Task<Result> Handle(UpdateLocationCommand command, CancellationToken cancellationToken)
         {
-            if (command.PatchDocument == null || command.Id <= 0)
-                return "Bad request";
+            var result = new Result();
+
+            if (command.Id <= 0 || command.PatchDocument == null)
+                return result.WithSuccess("Id must be greater than 0 or PatchDocument Shouldn't be null");
             
-            var location = await _unitOfWork.Location.LocationById(command.Id);
-            if (location.IsNullOrEmpty())
-                return "Location not found";
-            
-            foreach (var locations in location) command.PatchDocument.ApplyTo(locations);
-            foreach (var locations in location) await _unitOfWork.Location.UpdateLocation(command.Id, locations);
-            return "Location updated";
+            var locationData = await _unitOfWork.Location.LocationById(command.Id);
+            var locationDataCopy = await _unitOfWork.Location.LocationById(command.Id);
+            if (locationData == null)
+                return result.WithSuccess("Location not found");
+                
+            command.PatchDocument.ApplyTo(locationData);
+                
+            var location = new Core.Entities.Location
+            {
+                LocationId = command.Id,
+                Title = locationData.Title,
+                Address = locationData.Address,
+                LocationType = locationData.LocationType,
+                Geolocation = locationData.Geolocation,
+                RegistrationDate = locationDataCopy!.RegistrationDate,
+                RegistrarUserName = locationDataCopy.RegistrarUserName
+            };
+                
+            await _unitOfWork.Location.UpdateAsync(location);
+            return result.WithSuccess("Location updated");
         }
     }
 }
