@@ -17,6 +17,7 @@ public class UserController : ControllerBase
     [HttpPost("Login")]
     [ProducesResponseType(type: typeof(Result<string>), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult<Result>> Login(LoginUserCommand command)
     {
         var result = await _mediator.Send(command);
@@ -29,6 +30,7 @@ public class UserController : ControllerBase
     [HttpPost("Signup")]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult<Result>> Signup(SignupUserCommand command)
     {
         var result = await _mediator.Send(command);
@@ -41,6 +43,7 @@ public class UserController : ControllerBase
     [HttpGet("Get")]
     [ProducesResponseType(type: typeof(Result<User>), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult<Result>> Get()
     {
         var result = await _mediator.Send(new GetUsersRequest());

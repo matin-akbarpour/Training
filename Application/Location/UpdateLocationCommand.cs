@@ -2,12 +2,15 @@
 using FluentResults;
 using Infrastructure;
 using Microsoft.AspNetCore.JsonPatch;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Location;
 
 public class UpdateLocationCommand : IRequest<Result>
 {
+    [Required]
     public int Id { get; set; }
+    [Required]
     public JsonPatchDocument<Core.Entities.Location>? PatchDocument { get; set; }
 
     public class UpdateLocationHandler : IRequestHandler<UpdateLocationCommand, Result>
@@ -19,16 +22,16 @@ public class UpdateLocationCommand : IRequest<Result>
         {
             var result = new Result();
 
-            if (command.Id <= 0 || command.PatchDocument == null)
-                return result.WithSuccess("Id must be greater than 0 or PatchDocument Shouldn't be null");
+            if (command.Id <= 0)
+                return result.WithSuccess("Id must be greater than 0");
             
             var locationData = await _unitOfWork.Location.LocationById(command.Id);
             var locationDataCopy = await _unitOfWork.Location.LocationById(command.Id);
             if (locationData == null)
                 return result.WithSuccess("Location not found");
                 
-            command.PatchDocument.ApplyTo(locationData);
-                
+            command.PatchDocument!.ApplyTo(locationData);
+            
             var location = new Core.Entities.Location
             {
                 LocationId = command.Id,

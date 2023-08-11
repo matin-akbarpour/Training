@@ -32,6 +32,7 @@ public class ReservationController : ControllerBase
     [HttpGet("Get")]
     [ProducesResponseType(type: typeof(Result<Reservation>), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult<Result>> Get()
     {
         var result = await _mediator.Send(new GetReservationsRequest());

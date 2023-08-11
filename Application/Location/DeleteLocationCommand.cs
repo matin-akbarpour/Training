@@ -1,11 +1,13 @@
 ﻿using MediatR;
 using FluentResults;
 using Infrastructure;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Location;
 
 public class DeleteLocationCommand : IRequest<Result>
 {
+    [Required]
     public int Id { get; set; }
     
     public class DeleteLocationHandler : IRequestHandler<DeleteLocationCommand, Result>

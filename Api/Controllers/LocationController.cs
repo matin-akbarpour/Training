@@ -20,6 +20,7 @@ public class LocationController : ControllerBase
     [HttpGet("Get")]
     [ProducesResponseType(type: typeof(Result<Location>), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult> Get([FromQuery] GetLocationsRequest request)
     {
         var result = await _mediator.Send(request);
@@ -32,6 +33,7 @@ public class LocationController : ControllerBase
     [HttpPost("Register")]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult> Register(RegisterLocationCommand command)
     {
         var result = await _mediator.Send(command);
@@ -45,7 +47,7 @@ public class LocationController : ControllerBase
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
-    public async Task<ActionResult> Update(int id, [FromBody] JsonPatchDocument<Location> patchDocument)
+    public async Task<ActionResult> Update(int id, JsonPatchDocument<Location> patchDocument)
     {
         var result = await _mediator.Send(new UpdateLocationCommand {Id=id, PatchDocument=patchDocument});
         
@@ -57,6 +59,7 @@ public class LocationController : ControllerBase
     [HttpDelete("Delete/{id:int}")]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(type: typeof(Result), statusCode: StatusCodes.Status500InternalServerError)]
     public async Task<ActionResult> Delete(int id)
     {
         var result = await _mediator.Send(new DeleteLocationCommand {Id=id});
