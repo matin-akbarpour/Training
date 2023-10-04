@@ -1,0 +1,365 @@
+﻿++Solution 'WindowsFormsApp1' ‎(2 of 2 projects)
+i:{00000000-0000-0000-0000-000000000000}:WindowsFormsApp1.sln
+++Gateway
+i:{00000000-0000-0000-0000-000000000000}:Gateway
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Properties
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\properties\
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\
+++References
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++HttpRequestHelper
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\httprequesthelper\
+++HttpRequest.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\httprequesthelper\httprequest.cs
+++Models
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\
+++CustomerdepositsamountResponse.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\customerdepositsamountresponse.cs
+++FluentResultVm.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\fluentresultvm.cs
+++GetStatementByAccountNumberResponse.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\getstatementbyaccountnumberresponse.cs
+++KookAccountInfo.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\kookaccountinfo.cs
+++LoginResponse.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\loginresponse.cs
+++TransferPayaResponse.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\transferpayaresponse.cs
+++TransferSatnaResponse.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\models\transfersatnaresponse.cs
+++Class1.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\class1.cs
+++packages.config
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\packages.config
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\packages.config
+++AssemblyInfo.cs
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:d:\projects\z- my projects\windowsformsapp1\gateway\properties\assemblyinfo.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\assemblyinfo.cs
+++Microsoft.CSharp
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Newtonsoft.Json
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.ComponentModel.DataAnnotations
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Core
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Data
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Data.DataSetExtensions
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Net.Http
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Xml
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Xml.Linq
+i:{4ad3b06c-c500-446f-a7d6-914b5988782b}:
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++WindowsFormsApp1
+i:{00000000-0000-0000-0000-000000000000}:WindowsFormsApp1
+++Connected Services
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\connected services\
+++App.config
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\app.config
+++FrmAccountBalance.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmaccountbalance.cs
+++FrmLogin.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmlogin.cs
+++FrmMain.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmmain.cs
+++FrmProvidingInvoices.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmprovidinginvoices.cs
+++FrmSatnaPaya.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmsatnapaya.cs
+++NumericTextBox.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\numerictextbox.cs
+++Program.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\program.cs
+++SaminButton.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\saminbutton.cs
+++WindowsFormsApp1_TemporaryKey.pfx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\windowsformsapp1_temporarykey.pfx
+++Resources.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\resources.resx
+++Settings.settings
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\settings.settings
+++CEWorld.Convert
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++DNTPersianUtils.Core
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Microsoft.AspNetCore.WebUtilities
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Microsoft.Extensions.Configuration.Abstractions
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Microsoft.Extensions.Logging.Abstractions
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Microsoft.Extensions.Primitives
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++Microsoft.Net.Http.Headers
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++PersianDatePickerControl
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Buffers
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Deployment
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Drawing
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Memory
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Numerics
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Numerics.Vectors
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Runtime.CompilerServices.Unsafe
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Text.Encodings.Web
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Threading.Tasks.Extensions
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.ValueTuple
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++System.Windows.Forms
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:
+++FrmAccountBalance.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmaccountbalance.designer.cs
+++FrmAccountBalance.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmaccountbalance.resx
+++FrmLogin.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmlogin.designer.cs
+++FrmLogin.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmlogin.resx
+++FrmMain.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmmain.designer.cs
+++FrmMain.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmmain.resx
+++FrmProvidingInvoices.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmprovidinginvoices.designer.cs
+++FrmProvidingInvoices.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmprovidinginvoices.resx
+++FrmSatnaPaya.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmsatnapaya.designer.cs
+++FrmSatnaPaya.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\frmsatnapaya.resx
+++NumericTextBox.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\numerictextbox.resx
+++SaminButton.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\saminbutton.resx
+++Resources.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\resources.designer.cs
+++Settings.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\settings.designer.cs
+++PopupCalendar.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\popupcalendar.cs
+++PopupCalendar.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\popupcalendar.resx
+++bin
+++Debug
+++Release
+++app.publish
+++CEWorld.Convert.dll
+++DNTPersianUtils.Core.dll
+++DNTPersianUtils.Core.xml
+++Gateway.dll
+++Gateway.pdb
+++Microsoft.AspNetCore.WebUtilities.dll
+++Microsoft.AspNetCore.WebUtilities.xml
+++Microsoft.Extensions.Configuration.Abstractions.dll
+++Microsoft.Extensions.Configuration.Abstractions.xml
+++Microsoft.Extensions.Logging.Abstractions.dll
+++Microsoft.Extensions.Logging.Abstractions.xml
+++Microsoft.Extensions.Primitives.dll
+++Microsoft.Extensions.Primitives.xml
+++Microsoft.Net.Http.Headers.dll
+++Microsoft.Net.Http.Headers.xml
+++Newtonsoft.Json.dll
+++Newtonsoft.Json.xml
+++PersianDatePickerControl.dll
+++System.Buffers.dll
+++System.Buffers.xml
+++System.Memory.dll
+++System.Memory.xml
+++System.Numerics.Vectors.dll
+++System.Numerics.Vectors.xml
+++System.Runtime.CompilerServices.Unsafe.dll
+++System.Runtime.CompilerServices.Unsafe.xml
+++System.Text.Encodings.Web.dll
+++System.Text.Encodings.Web.xml
+++System.Threading.Tasks.Extensions.dll
+++System.Threading.Tasks.Extensions.xml
+++System.ValueTuple.dll
+++System.ValueTuple.xml
+++WindowsFormsApp1.application
+++WindowsFormsApp1.exe
+++WindowsFormsApp1.exe.config
+++WindowsFormsApp1.exe.manifest
+++WindowsFormsApp1.pdb
+++obj
+++TempPE
+++.NETFramework,Version=v4.8.AssemblyAttributes.cs
+++DesignTimeResolveAssemblyReferences.cache
+++DesignTimeResolveAssemblyReferencesInput.cache
+++SaminControl.SaminButton.resources
+++SBS.WinUIControls.ThousandsTextBox.resources
+++WindowsFormsApp1.csproj.AssemblyReference.cache
+++WindowsFormsApp1.csproj.CopyComplete
+++WindowsFormsApp1.csproj.CoreCompileInputs.cache
+++WindowsFormsApp1.csproj.FileListAbsolute.txt
+++WindowsFormsApp1.csproj.GenerateResource.cache
+++WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+++WindowsFormsApp1.FrmAccountBalance.resources
+++WindowsFormsApp1.FrmLogin.resources
+++WindowsFormsApp1.FrmMain.resources
+++WindowsFormsApp1.FrmProvidingInvoices.resources
+++WindowsFormsApp1.FrmSatnaPaya.resources
+++WindowsFormsApp1.Properties.Resources.resources
+++Properties.Resources.Designer.cs.dll
+++packages
+++DNTPersianUtils.Core.5.7.1
+++FluentResults.3.15.2
+++Microsoft.AspNetCore.WebUtilities.2.2.0
+++Microsoft.Bcl.AsyncInterfaces.7.0.0
+++Microsoft.Extensions.Configuration.7.0.0
+++Microsoft.Extensions.Configuration.Abstractions.7.0.0
+++Microsoft.Extensions.Logging.Abstractions.6.0.1
+++Microsoft.Extensions.Primitives.7.0.0
+++Microsoft.Net.Http.Headers.2.2.0
+++Newtonsoft.Json.13.0.3
+++PersianDatePickerWindowsFrom.3.0.1
+++System.Buffers.4.5.1
+++System.Memory.4.5.5
+++System.Net.Http.Json.7.0.1
+++System.Numerics.Vectors.4.5.0
+++System.Runtime.CompilerServices.Unsafe.6.0.0
+++System.Text.Encodings.Web.4.5.0
+++System.Text.Encodings.Web.7.0.0
+++System.Text.Json.7.0.2
+++System.Threading.Tasks.Extensions.4.5.4
+++System.ValueTuple.4.5.0
+++lib
+++.signature.p7s
+++DNTPersianUtils.Core.5.7.1.nupkg
+++FluentResults-Icon-128.png
+++FluentResults.3.15.2.nupkg
+++Microsoft.AspNetCore.WebUtilities.2.2.0.nupkg
+++buildTransitive
+++Icon.png
+++LICENSE.TXT
+++Microsoft.Bcl.AsyncInterfaces.7.0.0.nupkg
+++THIRD-PARTY-NOTICES.TXT
+++useSharedDesignerContext.txt
+++Microsoft.Extensions.Configuration.7.0.0.nupkg
+++Microsoft.Extensions.Configuration.Abstractions.7.0.0.nupkg
+++analyzers
+++build
+++Microsoft.Extensions.Logging.Abstractions.6.0.1.nupkg
+++Microsoft.Extensions.Primitives.7.0.0.nupkg
+++Microsoft.Net.Http.Headers.2.2.0.nupkg
+++LICENSE.md
+++Newtonsoft.Json.13.0.3.nupkg
+++packageIcon.png
+++README.md
+++PersianDatePickerWindowsFrom.3.0.1.nupkg
+++ref
+++System.Buffers.4.5.1.nupkg
+++version.txt
+++System.Memory.4.5.5.nupkg
+++System.Net.Http.Json.7.0.1.nupkg
+++System.Numerics.Vectors.4.5.0.nupkg
+++System.Runtime.CompilerServices.Unsafe.6.0.0.nupkg
+++System.Text.Encodings.Web.4.5.0.nupkg
+++runtimes
+++System.Text.Encodings.Web.7.0.0.nupkg
+++System.Text.Json.7.0.2.nupkg
+++System.Threading.Tasks.Extensions.4.5.4.nupkg
+++System.ValueTuple.4.5.0.nupkg
+++net46
+++net5.0
+++net6.0
+++net7.0
+++netstandard1.3
+++netstandard2.0
+++netstandard2.1
+++net461
+++net462
+++netcoreapp2.0
+++dotnet
+++Microsoft.Extensions.Logging.Abstractions.targets
+++netcoreapp3.1
+++net20
+++net35
+++net40
+++net45
+++netstandard1.0
+++netstandard1.1
+++uap10.0.16299
+++netcoreapp2.1
+++MonoAndroid10
+++MonoTouch10
+++portable-net45+win8+wp8+wpa81
+++xamarinios10
+++xamarinmac20
+++xamarintvos10
+++xamarinwatchos10
+++browser
+++net47
+++portable-net40+sl4+win8+wp8
+++FluentResults.dll
+++FluentResults.xml
+++Microsoft.Bcl.AsyncInterfaces.targets
+++_._
+++Microsoft.Bcl.AsyncInterfaces.dll
+++Microsoft.Bcl.AsyncInterfaces.xml
+++Microsoft.Extensions.Configuration.targets
+++Microsoft.Extensions.Configuration.dll
+++Microsoft.Extensions.Configuration.xml
+++Microsoft.Extensions.Configuration.Abstractions.targets
+++roslyn3.11
+++roslyn4.0
+++Microsoft.Extensions.Primitives.targets
+++System.Net.Http.Json.targets
+++System.Net.Http.Json.dll
+++System.Net.Http.Json.xml
+++System.Runtime.CompilerServices.Unsafe.targets
+++System.Text.Encodings.Web.targets
+++roslyn4.4
+++System.Text.Json.targets
+++System.Text.Json.dll
+++System.Text.Json.xml
+++cs
+++de
+++es
+++fr
+++it
+++ja
+++ko
+++pl
+++pt-BR
+++ru
+++tr
+++zh-Hans
+++zh-Hant
+++Microsoft.Extensions.Logging.Generators.dll
+++System.Text.Json.SourceGeneration.dll
+++Microsoft.Extensions.Logging.Generators.resources.dll
+++System.Text.Json.SourceGeneration.resources.dll
+++CalenderShamsi.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\calendershamsi.cs
+++CalenderShamsi.Designer.cs
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\calendershamsi.designer.cs
+++CalenderShamsi.resx
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\calendershamsi.resx
+++Calendar-1.png
+i:{0d5e4527-caf4-4fad-abc8-2af72716eb4b}:d:\projects\z- my projects\windowsformsapp1\windowsformsapp1\properties\calendar-1.png

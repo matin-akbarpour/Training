@@ -1,0 +1,73 @@
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmSatnaPayaMoneyTransfer.resources
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\PersianDatePickerControl.dll
+D:\Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.aaa.Form2.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\PersianDatePickerControl.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmLogin.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmMain.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmAccountBalance.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmProvidingInvoices.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmSatnaPaya.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Memory.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Buffers.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.ValueTuple.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Text.Encodings.Web.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\DNTPersianUtils.Core.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\DNTPersianUtils.Core.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\CEWorld.Convert.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\SaminControl.SaminButton.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\SBS.WinUIControls.ThousandsTextBox.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Net.Http.Headers.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.AspNetCore.WebUtilities.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.Net.Http.Headers.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Gateway.dll
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Gateway.pdb
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CalenderSHamsi.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.PopupCalendar.resources
+D:\Projects\z- My Projects\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FrmLoading.resources
