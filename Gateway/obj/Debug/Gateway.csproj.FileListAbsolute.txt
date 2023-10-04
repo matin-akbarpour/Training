@@ -1,9 +1,8 @@
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\bin\Debug\Gateway.dll
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\bin\Debug\Gateway.pdb
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\bin\Debug\Newtonsoft.Json.dll
-D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.csproj.AssemblyReference.cache
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.csproj.CoreCompileInputs.cache
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.csproj.CopyComplete
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.dll
 D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.pdb
-D:\Projects\z- My Projects\WindowsFormsApp1\Gateway\obj\Debug\Gateway.csproj.AssemblyReference.cache
