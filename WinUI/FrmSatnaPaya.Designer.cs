@@ -499,6 +499,7 @@
             this.txtShaba.Name = "txtShaba";
             this.txtShaba.Size = new System.Drawing.Size(211, 25);
             this.txtShaba.TabIndex = 1;
+            this.txtShaba.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtShaba_KeyPress);
             // 
             // txtAmountDisp
             // 

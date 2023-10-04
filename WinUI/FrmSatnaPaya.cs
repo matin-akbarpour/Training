@@ -9,11 +9,13 @@ using DNTPersianUtils.Core;
 using Gateway.HttpRequestHelper;
 using Gateway.Models;
 using Newtonsoft.Json;
+using WinUI.BaseDataEntry;
 
 namespace WinUI
 {
     public partial class FrmSatnaPaya : Form
     {
+        private BaseData _baseDataEntry;
         private readonly HttpRequest _httpRequest;
         private const string XApiKey = "pgH7QzFHJx4w46fI95Uzi4RvtTwlEXp";
         private FluentResultVm<TransferPayaResponse> _result1;
@@ -26,6 +28,7 @@ namespace WinUI
             {
                 InitializeComponent();
 
+                _baseDataEntry = new BaseData();
                 _httpRequest = new HttpRequest();
                 _httpRequest.Authorization(FrmLogin.Token);
             }
@@ -303,6 +306,11 @@ namespace WinUI
             {
                 MessageBox.Show("در انجام عملیات خطایی رخ داده است");
             }
+        }
+
+        private void txtShaba_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = _baseDataEntry.ValidNumber(e.KeyChar);
         }
     }
 }

@@ -95,6 +95,7 @@
             this.txtAccountNumber.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtAccountNumber.Size = new System.Drawing.Size(619, 26);
             this.txtAccountNumber.TabIndex = 0;
+            this.txtAccountNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAccountNumber_KeyPress);
             // 
             // mskToTime
             // 

@@ -3,11 +3,13 @@ using Gateway.Models;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using WinUI.BaseDataEntry;
 
 namespace WinUI
 {
     public partial class FrmAccountBalance : Form
     {
+        private BaseData _baseDataEntry;
         private readonly HttpRequest _httpRequest;
         private FluentResultVm<CustomerdepositsamountResponse> _result;
 
@@ -17,6 +19,7 @@ namespace WinUI
             {
                 InitializeComponent();
 
+                _baseDataEntry = new BaseData();
                 _httpRequest = new HttpRequest();
                 _httpRequest.Authorization(FrmLogin.Token);
             }
@@ -86,6 +89,11 @@ namespace WinUI
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtDepositNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = _baseDataEntry.ValidNumber(e.KeyChar);
         }
     }
 }

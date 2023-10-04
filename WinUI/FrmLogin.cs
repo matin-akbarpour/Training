@@ -30,11 +30,11 @@ namespace WinUI
         {
             try
             {
-                var user = new
-                {
-                    Username = "mtnicl_core",
-                    Password = "123456"
-                };
+                //var user = new
+                //{
+                //    Username = "mtnicl_core",
+                //    Password = "123456"
+                //};
 
                 errorProvider1.Clear();
 
@@ -43,11 +43,11 @@ namespace WinUI
                     return;
                 }
 
-                //var user = new
-                //{
-                //    Username = txtUserName.Text,
-                //    Password = txtPassword.Text
-                //};
+                var user = new
+                {
+                    Username = txtUserName.Text,
+                    Password = txtPassword.Text
+                };
 
                 var result = await _httpRequest.PostAction<FluentResultVm<LoginResponse>, object>("https://localhost:44332/Auth/LoginWithPassword", user);
 

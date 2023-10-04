@@ -5,11 +5,13 @@ using System.Drawing;
 using System.Windows.Forms;
 using Gateway.HttpRequestHelper;
 using Gateway.Models;
+using WinUI.BaseDataEntry;
 
 namespace WinUI
 {
     public partial class FrmProvidingInvoices : Form
     {
+        private BaseData _baseDataEntry;
         private readonly HttpRequest _httpRequest;
         private FluentResultVm<GetStatementByAccountNumberResponse> _result;
 
@@ -19,6 +21,7 @@ namespace WinUI
             {
                 InitializeComponent();
 
+                _baseDataEntry = new BaseData();
                 _httpRequest = new HttpRequest();
                 _httpRequest.Authorization(FrmLogin.Token);
             }
@@ -228,6 +231,11 @@ namespace WinUI
             {
                 MessageBox.Show("در انجام عملیات خطایی رخ داده است");
             }
+        }
+
+        private void txtAccountNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = _baseDataEntry.ValidNumber(e.KeyChar);
         }
     }
 }
